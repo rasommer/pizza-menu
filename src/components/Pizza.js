@@ -2,6 +2,9 @@ import React from "react";
 
 function Pizza(props) {
   const { name, ingredients, price, photoName, soldOut } = props;
+
+  // if (soldOut) return null;
+
   return (
     <li className="pizza">
       <img src={`/img/${photoName}`} alt={name} />
