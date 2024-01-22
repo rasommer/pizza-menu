@@ -7,7 +7,7 @@ function Menu() {
     <div className="menu">
       <h2>Our Menu</h2>
       <ul className="pizzas">
-        {pizzaData &&
+        {pizzaData.length > 0 ? (
           pizzaData.map((pizza) => {
             return (
               <Pizza
@@ -19,7 +19,12 @@ function Menu() {
                 soldOut={pizza.soldOut}
               />
             );
-          })}
+          })
+        ) : (
+          <p style={{ fontSize: "3rem" }}>
+            We're still working on our menu. Please come back later!
+          </p>
+        )}
       </ul>
     </div>
   );

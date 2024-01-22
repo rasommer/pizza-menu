@@ -1,9 +1,7 @@
 import React from "react";
-import getImageURL from "../util/image-util";
 
 function Pizza(props) {
   const { name, ingredients, price, photoName, soldOut } = props;
-  console.log(getImageURL(photoName));
   return (
     <li className="pizza">
       <img src={`/img/${photoName}`} alt={name} />
